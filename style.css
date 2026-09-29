@@ -1,0 +1,186 @@
+/* ===== VARIÁVEIS DE COR ===== */
+/* Assim fica fácil trocar as cores depois */
+:root {
+  --roxo-pastel: #b39ddb;       /* cor principal */
+  --roxo-escuro: #6a4c93;       /* texto/destaques com roxo */
+  --azul-claro: #bbdefb;        /* cor secundária */
+  --azul-escuro: #1976d2;       /* detalhes em azul */
+  --fundo: #f7f7fb;             /* fundo geral claro */
+  --branco: #ffffff;
+  --texto: #2b2b2b;
+  --texto-suave: #666;
+  --borda: #e0e0e6;
+}
+
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+  background: linear-gradient(135deg, var(--roxo-pastel), var(--azul-claro));
+  padding: 28px 20px;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.cabecalho h1 {
+  font-size: 1.9rem;
+  margin-bottom: 4px;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* ===== CARDS DE RESUMO ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background-color: var(--branco);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid var(--roxo-pastel);
+}
+
+.card h3 {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card .valor {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--roxo-escuro);
+}
+
+.card .detalhe {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-top: 4px;
+}
+
+/* Cores pastel suaves para variar os cards */
+.card.azul {
+  border-top-color: var(--azul-claro);
+}
+.card.azul .valor {
+  color: var(--azul-escuro);
+}
+
+/* ===== ÁREA DA TABELA ===== */
+.area-tabela h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--roxo-escuro);
+}
+
+.tabela-responsiva {
+  width: 100%;
+  overflow-x: auto; /* permite rolar no celular */
+  background-color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.tabela-boletim {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* garante leitura no celular com rolagem */
+}
+
+.tabela-boletim thead {
+  background-color: var(--roxo-pastel);
+}
+
+.tabela-boletim th {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  color: #2b2b2b;
+}
+
+.tabela-boletim td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--borda);
+  font-size: 0.9rem;
+}
+
+.tabela-boletim tbody tr:hover {
+  background-color: #fafaff;
+}
+
+/* Rótulos de situação */
+.situacao {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.situacao.bom {
+  background-color: #e6f4ea;
+  color: #1e7e34;
+}
+
+.situacao.atencao {
+  background-color: #fff4e5;
+  color: #b26a00;
+}
+
+.situacao.indisponivel {
+  background-color: #ececec;
+  color: #666;
+}
+
+/* Texto "Ainda não lançada" */
+.sem-nota {
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+/* ===== AJUSTES PARA CELULAR ===== */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 1.5rem;
+  }
+
+  .card .valor {
+    font-size: 1.35rem;
+  }
+}
