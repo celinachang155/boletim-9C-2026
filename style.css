@@ -1,11 +1,10 @@
 /* ===== VARIÁVEIS DE COR ===== */
-/* Assim fica fácil trocar as cores depois */
 :root {
-  --roxo-pastel: #b39ddb;       /* cor principal */
-  --roxo-escuro: #6a4c93;       /* texto/destaques com roxo */
-  --azul-claro: #bbdefb;        /* cor secundária */
-  --azul-escuro: #1976d2;       /* detalhes em azul */
-  --fundo: #f7f7fb;             /* fundo geral claro */
+  --roxo-pastel: #b39ddb;
+  --roxo-escuro: #6a4c93;
+  --azul-claro: #bbdefb;
+  --azul-escuro: #1976d2;
+  --fundo: #f7f7fb;
   --branco: #ffffff;
   --texto: #2b2b2b;
   --texto-suave: #666;
@@ -20,6 +19,7 @@
 }
 
 body {
+  /* Fonte limpa para o corpo em geral */
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background-color: var(--fundo);
   color: var(--texto);
@@ -35,8 +35,12 @@ body {
 }
 
 .cabecalho h1 {
-  font-size: 1.9rem;
+  /* Cabin Sketch no título principal */
+  font-family: "Cabin Sketch", "Segoe UI", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
   margin-bottom: 4px;
+  letter-spacing: 1px;
 }
 
 .subtitulo {
@@ -75,7 +79,9 @@ body {
 }
 
 .card .valor {
-  font-size: 1.6rem;
+  /* Cabin Sketch nos valores dos cards */
+  font-family: "Cabin Sketch", "Segoe UI", sans-serif;
+  font-size: 1.9rem;
   font-weight: 700;
   color: var(--roxo-escuro);
 }
@@ -86,7 +92,6 @@ body {
   margin-top: 4px;
 }
 
-/* Cores pastel suaves para variar os cards */
 .card.azul {
   border-top-color: var(--azul-claro);
 }
@@ -96,14 +101,16 @@ body {
 
 /* ===== ÁREA DA TABELA ===== */
 .area-tabela h2 {
-  font-size: 1.2rem;
+  font-family: "Cabin Sketch", "Segoe UI", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 12px;
   color: var(--roxo-escuro);
 }
 
 .tabela-responsiva {
   width: 100%;
-  overflow-x: auto; /* permite rolar no celular */
+  overflow-x: auto;
   background-color: var(--branco);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
@@ -112,7 +119,7 @@ body {
 .tabela-boletim {
   width: 100%;
   border-collapse: collapse;
-  min-width: 700px; /* garante leitura no celular com rolagem */
+  min-width: 700px;
 }
 
 .tabela-boletim thead {
@@ -160,7 +167,6 @@ body {
   color: #666;
 }
 
-/* Texto "Ainda não lançada" */
 .sem-nota {
   color: var(--texto-suave);
   font-style: italic;
@@ -177,10 +183,10 @@ body {
 /* ===== AJUSTES PARA CELULAR ===== */
 @media (max-width: 600px) {
   .cabecalho h1 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 
   .card .valor {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 }
