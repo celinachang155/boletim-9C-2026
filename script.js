@@ -3,7 +3,7 @@
    ========================================================= */
 
 const CONFIG_ALUNO = {
-  turma: "C",
+  turma: "9C",
   numeroChamada: 8,
   apiUrl: "https://boletim-api.profbt.com.br"
 };
