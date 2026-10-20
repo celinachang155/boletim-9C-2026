@@ -16,38 +16,63 @@
   <!-- CABEÇALHO -->
   <header class="cabecalho">
     <h1>Boletim Digital</h1>
-    <p class="subtitulo">9º Ano — Estudante Exemplo</p>
+    <p class="subtitulo">9º Ano — Turma C — Chamada 8</p>
   </header>
 
   <main class="conteudo">
 
-    <!-- CARDS DE RESUMO -->
-    <section class="cards" id="cardsResumo">
-      <!-- Os cards serão criados pelo JavaScript -->
-    </section>
-
-    <!-- TABELA DE NOTAS -->
-    <section class="area-tabela">
-      <h2>Notas por disciplina</h2>
-
-      <div class="tabela-responsiva">
-        <table class="tabela-boletim">
-          <thead>
-            <tr>
-              <th>Disciplina</th>
-              <th>1º Tri</th>
-              <th>2º Tri</th>
-              <th>3º Tri</th>
-              <th>Média</th>
-              <th>Faltas</th>
-              <th>Situação</th>
-            </tr>
-          </thead>
-          <!-- As linhas serão criadas pelo JavaScript -->
-          <tbody id="corpoTabela"></tbody>
-        </table>
+    <!-- TELA DE LOGIN / ACESSO POR PIN -->
+    <section id="areaLogin" class="card-login">
+      <h2>Acesso ao Boletim</h2>
+      <p class="info-aluno">Turma: <strong>C</strong> | Chamada: <strong>8</strong></p>
+      
+      <div class="form-login">
+        <label for="campoPin">PIN:</label>
+        <input type="password" id="campoPin" placeholder="Digite seu PIN" maxlength="20" autocomplete="off" />
+        <button id="btnEntrar" type="button">Entrar</button>
       </div>
+      
+      <div id="mensagemLogin" class="mensagem-status"></div>
     </section>
+
+    <!-- PAINEL DO BOLETIM (OCULTO ATÉ O LOGIN) -->
+    <div id="painelBoletim" style="display: none;">
+
+      <div class="barra-acoes">
+        <button id="btnAlternarEdicao" type="button" class="btn-acao">Alterar dados</button>
+        <button id="btnSalvar" type="button" class="btn-acao btn-salvar" style="display: none;">Salvar alterações</button>
+        <div id="mensagemEdicao" class="mensagem-status"></div>
+      </div>
+
+      <!-- CARDS DE RESUMO -->
+      <section class="cards" id="cardsResumo">
+        <!-- Os cards serão criados pelo JavaScript -->
+      </section>
+
+      <!-- TABELA DE NOTAS -->
+      <section class="area-tabela">
+        <h2>Notas por disciplina</h2>
+
+        <div class="tabela-responsiva">
+          <table class="tabela-boletim">
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>1º Tri</th>
+                <th>2º Tri</th>
+                <th>3º Tri</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <!-- As linhas serão criadas pelo JavaScript -->
+            <tbody id="corpoTabela"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
 
   </main>
 
